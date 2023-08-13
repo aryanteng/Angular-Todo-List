@@ -1,4 +1,5 @@
 <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+<p *ngIf="this.todos.length === 0">No todos to display</p>
 <div *ngFor="let todo of todos">
   <app-todo [todo]="todo" (deleteTodo)="deleteTodo($event)"></app-todo>
 </div>

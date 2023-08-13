@@ -9,26 +9,7 @@ import { Todo } from 'src/app/todo';
 export class TodosComponent implements OnInit {
   todos: Todo[];
   constructor() {
-    this.todos = [
-      {
-        id: 1,
-        title: 'Todo One',
-        description: 'This is Todo One',
-        completed: false,
-      },
-      {
-        id: 2,
-        title: 'Todo Two',
-        description: 'This is Todo Two',
-        completed: false,
-      },
-      {
-        id: 3,
-        title: 'Todo Three',
-        description: 'This is Todo Three',
-        completed: false,
-      },
-    ];
+    this.todos = [];
   }
 
   ngOnInit(): void {}
