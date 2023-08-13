@@ -9,4 +9,7 @@ import { Todo } from 'src/app/todo';
 export class TodoComponent implements OnInit {
   @Input() todo: Todo;
   ngOnInit(): void {}
+  onClick(todo: Todo) {
+    console.log(`clicked ${todo.title}`);
+  }
 }
