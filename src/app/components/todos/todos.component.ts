@@ -32,4 +32,9 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  deleteTodo = (todo: Todo) => {
+    console.log('delete', todo);
+    this.todos = this.todos.filter((t) => t.id !== todo.id);
+  };
 }
