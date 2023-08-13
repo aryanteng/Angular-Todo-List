@@ -9,9 +9,14 @@ import { Todo } from 'src/app/todo';
 export class TodoComponent implements OnInit {
   @Input() todo: Todo;
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
+  @Output() completeTodo: EventEmitter<Todo> = new EventEmitter();
   ngOnInit(): void {}
   onClick(todo: Todo) {
     this.deleteTodo.emit(todo);
     console.log(`clicked ${todo.title}`);
+  }
+  markComplete(todo: Todo) {
+    this.completeTodo.emit(todo);
+    console.log(`marked ${todo.title}`);
   }
 }
