@@ -33,6 +33,11 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  addTodo = (todo: Todo) => {
+    console.log('add', todo);
+    this.todos.push(todo);
+  };
+
   deleteTodo = (todo: Todo) => {
     console.log('delete', todo);
     this.todos = this.todos.filter((t) => t.id !== todo.id);
